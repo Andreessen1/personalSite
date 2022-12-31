@@ -1,0 +1,11 @@
+img{
+    display: flex;
+   height: 60rem;
+    width: 50rem;
+}
+.home{
+    display: flex;
+    float: center;
+    flex-direction: column;
+    background-color: darkgrey;
+}

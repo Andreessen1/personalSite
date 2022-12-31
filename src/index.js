@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import{
     AboutMe,
     Home,
+    MagicEightBall,
     NavBar,
     TicTacToe
 } from './components'
@@ -20,7 +21,7 @@ return(
         <Route path='/' element={<Home />} />
         <Route path='/WorkHistory' element={<WorkHistory />} />
         <Route path='/AboutMe' element={<AboutMe />} />
-        <Route path='/TicTacToe' element={<TicTacToe />} />
+        <Route path='/MagicEightBall' element={<MagicEightBall />} />
         </Routes>
     </div>
 )

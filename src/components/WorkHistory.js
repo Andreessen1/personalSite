@@ -1,30 +1,28 @@
 import React from 'react';
-import './WorkHistory.css'
+import './WorkHistory.css';
+import Collapsible from 'react-collapsible';
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
+// var coll = document.getElementsByClassName("collapsible");
+// var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
+// for (i = 0; i < coll.length; i++) {
+//   coll[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var content = this.nextElementSibling;
+//     if (content.style.display === "block") {
+//       content.style.display = "none";
+//     } else {
+//       content.style.display = "block";
+//     }
+//   });
+// }
 const WorkHistory = () => {
     return (
 
+        <div>
         
-        
-        <div className="home" >
-            
-            <button type="button" class="collapsible">Tech Work History</button>
-            <div class="content">
-            <p>
+        <Collapsible trigger="Tech History" className="collapsible">
+          
                <h1>
                    Personal Website: Dec 2022
                </h1>
@@ -43,11 +41,9 @@ const WorkHistory = () => {
                    <li>On the backend I helped create the Db and the Api</li>
                    <li>Helped with the funcionality of bootstrap to add it to the react app</li>
                </ul>
-               </p>
-            </div>
-            <button type="button" class="collapsible">Professional Work History</button>
-            <div class="content">
-                <p>
+            
+               </Collapsible>
+           <Collapsible trigger="Professional History" className="collapsible">
                     <h2>McGraw Hill | 2020-Present | Remote</h2>
                     <h4>Sales Support Representative</h4>
                     <ul>
@@ -76,11 +72,8 @@ const WorkHistory = () => {
                         <li>Spearheaded formation of a team to build a better relationship between marketing and customer service department after taking into account how changes such as better communication of promotions and other goals could increase business.</li>
                         <li>Quickly and effectively resolved customer complaints and conflicts</li>
                     </ul>
-                </p>
-            </div>
-            <button type="button" class="collapsible">Schooling</button>
-            <div class="content">
-            <p>
+                    </Collapsible>
+            <Collapsible trigger="School History" className="collapsible">
                     <h2>Full Stack Academy |  December2022| Remote</h2>
                     <h4>Web Design Certificate</h4>
                     <ul>
@@ -89,11 +82,8 @@ const WorkHistory = () => {
 
                     <h2>Community College of Philadelphia | 2017</h2>
                     <h4>Assocaites in Business Administration</h4>
-                </p>  
-                
-            </div>
-           
-        </div>
+                    </Collapsible>
+                    </div>
     )
 }
 
